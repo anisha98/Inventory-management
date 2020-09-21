@@ -1,0 +1,56 @@
+<html>
+    <link rel="stylesheet" type="text/css" href="static/edit.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <body>
+        <div class = "header">
+            <nav class="navbar navbar-dark bg-dark">
+                <a class="navbar-brand" href="{{ url_for('index') }}">Back</a>
+                <a class="navbar-brand" href="{{ url_for('code') }}">Product</a>
+              </nav>
+    </div>
+        <form class="form" style="margin-top: 40px;  margin-left: 1px; background-color: rgb(180, 183, 211); padding-top: 50px;">
+            <div style="padding-left: 450px;" class="form-group row">
+              <label style="font-weight: bold; font-size: 18px;" for="inputEmail3" class="col-sm-2 col-form-label">Product</label>
+              <div class="col-sm-10">
+                <input style="width: 200px;" type="text" class="form-control" id="inputEmail3" >
+              </div>
+            </div>
+            <div style="padding-left: 450px;" class="form-group row">
+              <label style="font-weight: bold; font-size: 18px;" for="inputPassword3" class="col-sm-2 col-form-label">Items(Bangalore)</label>
+              <div class="col-sm-10">
+                <input style="width: 200px;" type="text" class="form-control" id="inputPassword3">
+              </div>
+            </div>
+            <div style="padding-left: 450px;" class="form-group row">
+                <label style="font-weight: bold; font-size: 18px;" for="inputEmail3" class="col-sm-2 col-form-label">Items(Chennai)</label>
+                <div class="col-sm-10">
+                  <input style="width: 200px;" type="text" class="form-control" id="inputEmail3">
+                </div>
+              </div>
+              <div style="padding-left: 450px;" class="form-group row">
+                <label style="font-weight: bold; font-size: 18px;" for="inputEmail3" class="col-sm-2 col-form-label">Items(Mumbai)</label>
+                <div class="col-sm-10">
+                  <input style="width: 200px;" type="text" class="form-control" id="inputEmail3">
+                </div>
+              </div>
+              <div style="padding-left: 450px;" class="form-group row">
+                <label style="font-weight: bold; font-size: 18px;" for="inputEmail3" class="col-sm-2 col-form-label">Shift From</label>
+                <div class="col-sm-10">
+                  <input style="width: 200px;" type="text" class="form-control" id="inputEmail3">
+                </div>
+              </div>
+              <div style="padding-left: 450px;" class="form-group row">
+                <label style="font-weight: bold; font-size: 18px;  " for="inputEmail3" class="col-sm-2 col-form-label">SHIFT TO</label>
+                <div class="col-sm-10">
+                  <input style="width: 200px;" type="text" class="form-control" id="inputEmail3">
+                </div>
+              </div>
+            <div class="form-group row">
+              <div class="col-sm-10">
+                <button style="margin-left:100px; margin-top: 50px; margin-bottom: 40px;"type="submit" class="btn btn-primary">Update</button>
+                <button style="margin-left:525px; margin-top: 50px; float:left;"type="submit" class="btn btn-primary">Delete</button>
+              </div>
+            </div>
+          </form>
+    </body>
+</html>

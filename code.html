@@ -1,0 +1,48 @@
+<html>
+    <link rel="stylesheet" type="text/css" href="static/product.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <body>
+    <div class = "header">
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="{{ url_for('index') }}">Back</a>
+            <a class="navbar-brand" href="{{ url_for('movement') }}">Movement</a>
+          </nav>
+</div>
+    <div class = "product">
+        <iframe src="https://giphy.com/embed/l4Ho7AfNzHCtwGR0s" width="500" height="200" style="margin-left: 425px;margin-bottom:30px;margin-top:-70px;"frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        <table style="position: relative;" class="table table-dark" >
+            <thead>
+              <tr>
+                <th scope="col">Product Id</th>
+                <th scope="col">Product</th>
+                <th scope="col">Items(Bangalore)</th>
+                <th scope="col">Items(Chennai)</th>
+                <th scope="col">Items(Mumbai)</th>
+                <!--<th scope="col">Shift from</th>
+                <th scope="col">Shift to</th>-->
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            {%for task1 in task1%}
+            <tbody>
+              <tr>
+                <th scope="row">{{task1.pid}}</th>
+                <td>{{task1.name}}</td>
+                {% for task2 in task2 %}
+                {% if task2.name == task1.name %}
+                <td>{{task2.loc1}}</td>
+                <td>{{task2.loc2}}</td>
+                <td>{{task2.loc3}}</td>
+                {% endif %}
+                {% endfor %}
+                <td><button type="button" onclick = "window.location.href='{{ url_for( 'location') }}';" class="btn btn-danger">Edit</button></td>
+                <td><button type="button" class="btn btn-danger" style="text-decoration: none; "><a style ="text-decoration: none; color: honeydew;" href="/delete/{{task1.name}}">Delete</a></button></td>
+              </tr>
+            </tbody>
+            {% endfor %}
+          </table>
+          <button style="position: relative; margin-left: 630px; height: 40px; width: 100px; background-color: green; border-color: green;" type="button" onclick = "window.location.href='{{ url_for( 'additem') }}';" class="btn btn-danger">Add Item</button>
+    </div>
+    </body>
+</html>
