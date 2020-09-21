@@ -2,6 +2,7 @@
 
 This Project is made using Python(Flask),Sqlite(SQLalchemy),HTML and CSS
 This is the first page when we click on it, it navigates to the second page.
+<br/>
 ![](img1.png)
 <br/>
 <br/>
